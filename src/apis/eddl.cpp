@@ -348,6 +348,8 @@ namespace eddl {
             return new LCrossEntropy();
         } else if (type == "soft_cross_entropy") {
             return new LSoftCrossEntropy();
+        } else if (type == "dice") {
+            return new LDice();
         }
         return nullptr;
     }

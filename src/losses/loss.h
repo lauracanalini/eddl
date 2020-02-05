@@ -99,6 +99,14 @@ public:
     float value(Tensor *T, Tensor *Y) override;
 };
 
+class LDice : public Loss {
+public:
+    LDice();
+
+    void delta(Tensor *T, Tensor *Y, Tensor *D) override;
+    float value(Tensor *T, Tensor *Y) override;
+};
+
 
 // TODO: Implement
 //void mean_squared_error(Tensor *T, Tensor *Y, Tensor *D);
